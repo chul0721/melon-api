@@ -1,0 +1,34 @@
+{
+  "all": "GN0000",
+  "domestic": {
+    "all": "DM0000",
+    "ballad": "GN0100",
+    "dance": "GN0200",
+    "hiphop": "GN0300",
+    "R&B": "GN0400",
+    "indie": "GN0500",
+    "rock": "GN0600",
+    "trot": "GN0700",
+    "folk": "GN0800"
+  },
+  "foreign": {
+    "all": "AB0000",
+    "pop": "GN0900",
+    "rock": "GN1000",
+    "electronica": "GN1100",
+    "hiphop": "GN1200",
+    "R&B": "GN1300",
+    "folk": "GN1400"
+  },
+  "others": {
+    "OST": "GN1500",
+    "JAZZ": "GN1700",
+    "newage": "GN1800",
+    "jpop": "GN1900",
+    "world": "GN2000",
+    "ccm": "GN2100",
+    "kids": "GN2200",
+    "religion": "GN2300",
+    "traditional": "GN2400"
+  }
+}
