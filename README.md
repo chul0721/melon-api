@@ -10,63 +10,43 @@
 # Docs
 
 목차
-* [1. Chart](#Chart)
-* [2. Lyrics (on process)](#Lyrics)
+
+- [1. Chart](#Chart)
+- [2. Lyrics (on process)](#Lyrics)
 
 ## Chart
 
-| Option | Type | Description | Value | Required |
-| :---      | :--- | :---        | :---  | :---     |
-| `sort` | `string` | melon API을 이용하여 가져올 정보의 종류를 선택 | 'chart' | **필수** |
-| `url` | `string` | 가져올 차트의 종류를 선택합니다. | 'main', 'day', 'week', 'month', 'lyrics' | **필수 아님**, 기본값 'main' |
-| `region` | `string` | 가져올 차트의 지역을 선택합니다. | 'all', 'domestic', 'foreign', 'others' | genre 항목 설정 시 **필수**, 단 설정하지 않을 경우 **필수 아님**, 기본값 'all' |
-| `genre` | `string` | 가져올 차트의 장르를 선택합니다. | [**아래 참고**](#genre) | **필수 아님** |
+`baseURL`: https://api.chuls.works:3535/chart
+
+| Parameter | Type     | Description                                    | Values                                   | Required                                                                       |
+| :-------- | :------- | :--------------------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------- |
+| `?sort`   | `string` | melon API을 이용하여 가져올 정보의 종류를 선택 | 'chart'                                  | **필수**                                                                       |
+| `?url`    | `string` | 가져올 차트의 종류를 선택합니다.               | 'main', 'day', 'week', 'month', 'lyrics' | **필수 아님**, 기본값 'main'                                                   |
+| `?region` | `string` | 가져올 차트의 지역을 선택합니다.               | 'all', 'domestic', 'foreign', 'others'   | genre 항목 설정 시 **필수**, 단 설정하지 않을 경우 **필수 아님**, 기본값 'all' |
+| `?genre`  | `string` | 가져올 차트의 장르를 선택합니다.               | [**아래 참고**](#genre)                  | **필수 아님**                                                                  |
 
 ### genre
-genre 항목 설정 시 아래 중 한 가지 타입을 선택할 수 있습니다.  
-* "all"의 경우 장르를 선택할 수 없습니다.
 
-* "domestic"
+genre 항목 설정 시 아래 중 `한 가지` 타입을 선택할 수 있습니다.
+
+- "all"의 경우 장르를 선택할 수 없습니다.
+
+- "domestic"
+
 ```json
-[
-  "all",
-  "ballad",
-  "dance",
-  "hiphop",
-  "R&B",
-  "indie",
-  "rock",
-  "trot",
-  "folk"
-]
+["all", "ballad", "dance", "hiphop", "R&B", "indie", "rock", "trot", "folk"]
 ```
 
-* "foreign"
+- "foreign"
+
 ```json
-[
-  "all",
-  "pop",
-  "rock",
-  "electronica",
-  "hiphop",
-  "R&B",
-  "folk"
-]
+["all", "pop", "rock", "electronica", "hiphop", "R&B", "folk"]
 ```
 
-* "others"
+- "others"
+
 ```json
-[
-  "OST",
-  "JAZZ",
-  "newage",
-  "jpop",
-  "world",
-  "ccm",
-  "kids",
-  "religion",
-  "traditional"
-]
+["OST", "JAZZ", "newage", "jpop", "world", "ccm", "kids", "religion", "traditional"]
 ```
 
 ## Lyrics
@@ -75,7 +55,7 @@ genre 항목 설정 시 아래 중 한 가지 타입을 선택할 수 있습니�
 
 # Stack
 
-* Nest.js
-* TypeScript
-* Jest
-* cheerio
+- Nest.js
+- TypeScript
+- Jest
+- cheerio
