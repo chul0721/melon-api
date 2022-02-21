@@ -1,7 +1,8 @@
 # Melon API v2
 
 <img src="./public/melon.png" width="300" /><br /><br />
-해당 API는 [(주)카카오엔터테인먼트](https://kakaoent.com/)의 [멜론](http://melon.com/) 서비스의 비공식 API입니다.
+해당 API는 [(주)카카오엔터테인먼트](https://kakaoent.com/)의 [멜론](http://melon.com/) 서비스의 비공식 API입니다.  
+현재 개발 중에 있으므로 API는 정상 작동하지 않습니다.
 
 # 소개
 
