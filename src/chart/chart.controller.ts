@@ -1,5 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common'
 import { ChartService } from './chart.service'
+import { ChartDTO } from './dto/chart.dto'
 import { GenreValues, RegionValues, UrlValues } from './entities/chart.entities'
 
 @Controller('chart')
@@ -11,7 +12,7 @@ export class ChartController {
     @Param('url') url: UrlValues,
     @Param('region') region: RegionValues,
     @Param('genre') genre: GenreValues
-  ): string {
+  ): ChartDTO {
     return this.chartService.main(url, region, genre)
   }
 }

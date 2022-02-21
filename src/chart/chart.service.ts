@@ -4,17 +4,17 @@ import { GenreValues, RegionValues, UrlValues } from './entities/chart.entities'
 
 @Injectable()
 export class ChartService {
-  private data: ChartDTO = {
-    url: '',
-    region: '',
-    genre: ''
-  }
+  private data = {}
 
-  main(url: UrlValues, region: RegionValues, genre: GenreValues): string {
+  main(url: UrlValues, region: RegionValues, genre: GenreValues): ChartDTO {
     if (!url || !region || !genre) {
       throw new BadRequestException('Please specify parameters')
     } else {
-      return (this.data = JSON.parse(`{"url": ${url}, "region": ${region}, "genre": ${genre}}`))
+      return (this.data = {
+        url: url,
+        region: region,
+        genre: genre
+      })
     }
   }
 }
