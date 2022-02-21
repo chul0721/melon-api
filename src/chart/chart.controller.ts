@@ -1,18 +1,17 @@
-import { Controller, Get, Param, Query } from '@nestjs/common'
+import { Controller, Get, Param } from '@nestjs/common'
 import { ChartService } from './chart.service'
-import { GenreValues, RegionValues, SortValues, UrlValues } from './entities/chart.entities'
+import { GenreValues, RegionValues, UrlValues } from './entities/chart.entities'
 
 @Controller('chart')
 export class ChartController {
   constructor(private readonly chartService: ChartService) {}
 
-  @Get()
+  @Get('/:url/:region/:genre')
   main(
-    @Query('sort') sort: SortValues,
-    @Query('url') url: UrlValues,
-    @Query('region') region: RegionValues,
-    @Query('genre') genre: GenreValues
+    @Param('url') url: UrlValues,
+    @Param('region') region: RegionValues,
+    @Param('genre') genre: GenreValues
   ): string {
-    return this.chartService.main(sort, url, region, genre)
+    return this.chartService.main(url, region, genre)
   }
 }

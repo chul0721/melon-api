@@ -16,14 +16,16 @@
 
 ## Chart
 
-`baseURL`: https://api.chuls.works:3535/chart
+`baseURL`: https://api.chuls.works:3535/
 
-| Parameter | Type     | Description                                    | Values                                   | Required                                                                       |
-| :-------- | :------- | :--------------------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------- |
-| `?sort`   | `string` | melon API을 이용하여 가져올 정보의 종류를 선택 | 'chart'                                  | **필수**                                                                       |
-| `?url`    | `string` | 가져올 차트의 종류를 선택합니다.               | 'main', 'day', 'week', 'month', 'lyrics' | **필수 아님**, 기본값 'main'                                                   |
-| `?region` | `string` | 가져올 차트의 지역을 선택합니다.               | 'all', 'domestic', 'foreign', 'others'   | genre 항목 설정 시 **필수**, 단 설정하지 않을 경우 **필수 아님**, 기본값 'all' |
-| `?genre`  | `string` | 가져올 차트의 장르를 선택합니다.               | [**아래 참고**](#genre)                  | **필수 아님**                                                                  |
+| Parameter  | Type     | Description                                    | Values                                   | Required                                                      |
+| :--------- | :------- | :--------------------------------------------- | :--------------------------------------- | :------------------------------------------------------------ |
+| `/:sort`   | `string` | melon API을 이용하여 가져올 정보의 종류를 선택 | 'chart'                                  | **필수**                                                      |
+| `/:url`    | `string` | 가져올 차트의 종류를 선택합니다.               | 'main', 'day', 'week', 'month', 'lyrics' | **필수**                                                      |
+| `/:region` | `string` | 가져올 차트의 지역을 선택합니다.               | 'all', 'domestic', 'foreign', 'others'   | **필수** (`/:genre` 설정 시에만 필요, 그 외의 경우 필요 없음) |
+| `/:genre`  | `string` | 가져올 차트의 장르를 선택합니다.               | [**아래 참고**](#genre)                  | **필수 아님**                                                 |
+
+ex) https://api.chuls.works:3535/chart/main/domestic/all
 
 ### genre
 

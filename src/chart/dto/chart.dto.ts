@@ -1,9 +1,6 @@
 import { IsOptional, IsString } from 'class-validator'
 
 export class ChartDTO {
-  @IsString()
-  readonly sort: string
-
   @IsOptional()
   @IsString()
   readonly url: string

@@ -1,11 +1,20 @@
 import { BadRequestException, Injectable } from '@nestjs/common'
-import { GenreValues, RegionValues, SortValues, UrlValues } from './entities/chart.entities'
+import { ChartDTO } from './dto/chart.dto'
+import { GenreValues, RegionValues, UrlValues } from './entities/chart.entities'
 
 @Injectable()
 export class ChartService {
-  private readonly data = {}
+  private data: ChartDTO = {
+    url: '',
+    region: '',
+    genre: ''
+  }
 
-  main(sort: SortValues, url: UrlValues, region: RegionValues, genre: GenreValues): string {
-    throw new BadRequestException('Please specify path')
+  main(url: UrlValues, region: RegionValues, genre: GenreValues): string {
+    if (!url || !region || !genre) {
+      throw new BadRequestException('Please specify parameters')
+    } else {
+      return (this.data = JSON.parse(`{"url": ${url}, "region": ${region}, "genre": ${genre}}`))
+    }
   }
 }

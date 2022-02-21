@@ -1,7 +1,3 @@
-export class SortValues {
-  sort: 'chart'
-}
-
 export class UrlValues {
   url: 'main' | 'day' | 'week' | 'month' | 'year'
 }
